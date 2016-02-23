@@ -7,6 +7,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
+import android.util.Log;
 import android.widget.ArrayAdapter;
 
 import org.jsoup.Jsoup;
@@ -92,10 +93,10 @@ public class MonthOfSnow extends ListFragment {
         ConnectivityManager connMgr = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
-            System.out.println("good connection");
+            Log.d("CONNECTION INFO: ", "good connection");
             new PullSnowHistoryTask().execute(stringUrl);
         } else {
-            System.out.println("bad connection");
+            Log.d("CONNECTION INFO: ", "bad connection");
         }
     }
 
@@ -137,12 +138,12 @@ public class MonthOfSnow extends ListFragment {
 
         @Override
         protected void onPostExecute(final String[] result) {
-
-            getActivity().runOnUiThread(new Runnable() {
-                public void run() {
-                    updateMonthView(result);
-                }
-            });
+            updateMonthView(result);
+//            getActivity().runOnUiThread(new Runnable() {
+//                public void run() {
+//                    updateMonthView(result);
+//                }
+//            });
         }
     }
 

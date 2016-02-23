@@ -101,7 +101,6 @@ public class MainActivity extends FragmentActivity implements HomeTurf.OnMountai
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         month.setArguments(args);
         transaction.replace(R.id.month_fragment_container, month);
-        transaction.addToBackStack(null);
         transaction.commit();
     }
 }

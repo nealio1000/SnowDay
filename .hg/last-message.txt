@@ -1,1 +1,2 @@
-commented out oncreateview and newinstace in monthofsnow
+Fixed a bug that caused extra network requests. 
+Fixed a bug that caused crashes on exit
