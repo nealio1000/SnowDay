@@ -7,6 +7,7 @@ data/app/src/main/res/mipmap-xxhdpi/ic_launcher.png.i
 data/app/src/main/res/mipmap-mdpi/ic_launcher.png.i
 data/app/src/main/res/mipmap-hdpi/ic_launcher.png.i
 data/app/src/main/java/ventureindustries/snowday/MyItemRecyclerViewAdapter.java.i
+data/app/src/main/res/layout/row_layout.xml.i
 data/app/src/main/res/mipmap-xhdpi/ic_launcher.png.i
 data/app/src/main/java/ventureindustries/snowday/HomeTurf.java.i
 data/app/src/main/res/values/dimens.xml.i

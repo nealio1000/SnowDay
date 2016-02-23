@@ -15,6 +15,7 @@ data/app/src/main/java/ventureindustries/snowday/MonthData.java.i
 data/app/src/main/res/values/styles.xml.i
 data/app/src/main/res/layout/fragment_month_of_snow.xml.i
 data/app/src/main/java/ventureindustries/snowday/dummy/DummyContent.java.i
+data/app/src/main/res/menu/menu_main.xml.i
 data/app/src/main/res/layout/fragment_home_turf.xml.i
 data/app/src/main/res/layout/fragment_hometurf.xml.i
 data/app/src/main/res/values/colors.xml.i

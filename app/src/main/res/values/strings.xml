@@ -1,6 +1,3 @@
 <resources>
     <string name="app_name">SnowDay</string>
-    <string name="dow">Sun</string>
-    <string name="date">Jan 1</string>
-    <string name="value">10"</string>
 </resources>

@@ -1,11 +1,13 @@
 package ventureindustries.snowday;
 
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuInflater;
 
-public class MainActivity extends FragmentActivity implements HomeTurf.OnMountainSelectedListener
+public class MainActivity extends AppCompatActivity implements HomeTurf.OnMountainSelectedListener
 {
     private HomeTurf ht;
     private MonthOfSnow month;
@@ -37,6 +39,13 @@ public class MainActivity extends FragmentActivity implements HomeTurf.OnMountai
             transaction.add(R.id.list_fragment_container, ht);
             transaction.commit();
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
+        return true;
     }
 
     public String getMountainUrl(String mountain) {
