@@ -1,0 +1,67 @@
+<ListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/monthview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <!--&lt;!&ndash; TODO: Update blank fragment layout &ndash;&gt;-->
+    <!--<TextView-->
+    <!--android:text="Jan 1 \n20&quot;"-->
+    <!--android:textIsSelectable="true"-->
+    <!--android:textSize="15sp"-->
+    <!--/>-->
+    <!--<TextView-->
+    <!--android:text="Jan 2 \n3&quot;"-->
+    <!--android:textIsSelectable="true"-->
+    <!--android:textSize="15sp" />-->
+    <!--<TextView-->
+    <!--android:text="Jan 3 \n0&quot;"-->
+    <!--android:textIsSelectable="true"-->
+    <!--android:textSize="15sp" />-->
+    <!--<TextView-->
+    <!--android:text="Jan 4 \n5&quot;"-->
+    <!--android:textIsSelectable="true"-->
+    <!--android:textSize="15sp" />-->
+    <!--<TextView-->
+    <!--android:text="Jan 5 \n2&quot;"-->
+    <!--android:textIsSelectable="true"-->
+    <!--android:textSize="15sp" />-->
+    <!--<TextView-->
+    <!--android:text="Jan 6 \n0&quot;"-->
+    <!--android:textIsSelectable="true"-->
+    <!--android:textSize="15sp" />-->
+    <!--<TextView-->
+    <!--android:text="Jan 7 \n0&quot;"-->
+    <!--android:textIsSelectable="true"-->
+    <!--android:textSize="15sp" />-->
+    <!--<TextView-->
+    <!--android:text="Jan 8 \n0&quot;"-->
+    <!--android:textIsSelectable="true"-->
+    <!--android:textSize="15sp" />-->
+    <!--<TextView-->
+    <!--android:text="Jan 9 \n1&quot;"-->
+    <!--android:textIsSelectable="true"-->
+    <!--android:textSize="15sp" />-->
+    <!--<TextView-->
+    <!--android:text="Jan 10 \n12&quot;"-->
+    <!--android:textIsSelectable="true"-->
+    <!--android:textSize="15sp" />-->
+    <!--<TextView-->
+    <!--android:text="Jan 11 \n8&quot;"-->
+    <!--android:textIsSelectable="true"-->
+    <!--android:textSize="15sp" />-->
+    <!--<TextView-->
+    <!--android:text="Jan 12 \n3&quot;"-->
+    <!--android:textIsSelectable="true"-->
+    <!--android:textSize="15sp" />-->
+    <!--<TextView-->
+    <!--android:text="Jan 13 \n5&quot;"-->
+    <!--android:textIsSelectable="true"-->
+    <!--android:textSize="15sp" />-->
+    <!--<TextView-->
+    <!--android:text="Jan 14 \n0&quot;"-->
+    <!--android:textIsSelectable="true"-->
+    <!--android:textSize="15sp" />-->
+
+
+</ListView>

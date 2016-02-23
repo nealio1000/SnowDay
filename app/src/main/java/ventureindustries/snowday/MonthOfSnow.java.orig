@@ -1,0 +1,167 @@
+package ventureindustries.snowday;
+
+import android.app.Activity;
+import android.content.Context;
+import android.os.Build;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AbsListView;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.GridLayout;
+import android.widget.LinearLayout;
+import android.support.v4.app.ListFragment;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class MonthOfSnow extends ListFragment {
+
+    final static String ARG_POSITION = "position";
+    int mCurrentPosition = -1;
+    private ListView mListView;
+    private MonthListAdapter mAdapter;
+
+
+//    FragmentActivity mActivity;
+
+
+
+//
+//    private String[][] monthData;
+
+    public MonthOfSnow() {
+        // Required empty public constructor
+    }
+
+
+    @Override
+    public void onCreate (Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+//        String[] days = new String[30];
+//
+//        dayList = new ArrayList();
+//        if(monthData[0][0] != null) {
+//            for (int i = 0; i < 30; i++)
+//                dayList.add(new MonthListItem(monthData[0][i], monthData[1][i], monthData[2][i]));
+
+
+//
+
+//        List<String> dayList = new ArrayList<>();
+//
+//        for (int i = 0; i < 29; i++) {
+//            String day = data[0][i] + "\n" + data[1][i] + "\n" + data[2][i];
+//            dayList.add(day);
+//        }
+//
+//        setListAdapter(new ArrayAdapter<>(getActivity(), R.layout.fragment_month_of_snow, dayList));
+//        MonthListAdapter monthAdapter = new MonthListAdapter(getActivity(), dayList);
+//        }
+    }
+
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+
+//        View view = inflater.inflate(R.layout.fragment_month_of_snow, container, false);
+//        setListAdapter(new MonthListAdapter(getActivity(), dayList));
+
+        if (savedInstanceState != null) {
+            mCurrentPosition = savedInstanceState.getInt(ARG_POSITION);
+        }
+
+        return inflater.inflate(R.layout.fragment_month_of_snow, container, false);
+    }
+
+//    @Override
+//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+//                             Bundle savedInstanceState) {
+//        View view = inflater.inflate(R.layout.fragment_month_of_snow, container, false);
+//
+//        // Set the adapter
+//        mListView = (ListView) view.findViewById(android.R.id.list);
+//        ((AdapterView) mListView).setAdapter(mAdapter);
+//
+//
+//        return view;
+//    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        // During startup, check if there are arguments passed to the fragment.
+        // onStart is a good place to do this because the layout has already been
+        // applied to the fragment at this point so we can safely call the method
+        // below that sets the article text.
+//        Bundle args = getArguments();
+//        if (args != null) {
+//            // Set article based on argument passed in
+////            updateMonthView(args.getInt(ARG_POSITION));
+//        } else if (mCurrentPosition != -1) {
+//            // Set article based on saved instance state defined during onCreateView
+////            updateMonthView(mCurrentPosition);
+//        }
+   }
+
+//    public void updateMonthView(int position) {
+//        LinearLayout month = (LinearLayout) getActivity().findViewById(R.id.theMonth);
+//        mCurrentPosition = position;
+//    }
+
+    public void updateMonthView(String[][] data) {
+//        LinearLayout month = (LinearLayout) getActivity().findViewById(R.id.theMonth);
+
+        List<String> dayList = new ArrayList<>();
+
+        for (int i = 0; i < 29; i++) {
+            String day = data[0][i] + "\n" + data[1][i] + "\n" + data[2][i];
+            dayList.add(day);
+        }
+
+
+//        setListAdapter(new ArrayAdapter<>(getActivity(), R.layout.fragment_month_of_snow, dayList));
+
+
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        // Save the current article selection in case we need to recreate the fragment
+        outState.putInt(ARG_POSITION, mCurrentPosition);
+    }
+
+
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+    }
+
+//    @Override
+//    public void onAttach(Activity activity) {
+//        super.onAttach(activity);
+//        mActivity = (FragmentActivity)activity;
+//    }
+
+}
