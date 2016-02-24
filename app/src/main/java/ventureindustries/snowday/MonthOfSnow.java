@@ -28,41 +28,15 @@ public class MonthOfSnow extends ListFragment {
         // Required empty public constructor
     }
 
-//    public static MonthOfSnow newInstance(String mountain) {
-//        MonthOfSnow newMonth = new MonthOfSnow();
-//        Bundle args = new Bundle();
-//        args.putString("mountain", mountain);
-//        newMonth.setArguments(args);
-//
-//        return newMonth;
-//    }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
 
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-//                             Bundle savedInstanceState) {
-//        // Inflate the layout for this fragment
-//
-//        if (savedInstanceState != null) {
-//            mCurrentPosition = savedInstanceState.getInt(ARG_POSITION);
-//        }
-//
-//        return inflater.inflate(R.layout.fragment_month_of_snow, container, false);
-//    }
-
-
     @Override
     public void onStart() {
         super.onStart();
 
-        // During startup, check if there are arguments passed to the fragment.
-        // onStart is a good place to do this because the layout has already been
-        // applied to the fragment at this point so we can safely call the method
-        // below that sets the article text.
         Bundle args = getArguments();
 
         if (args != null) {
@@ -111,11 +85,11 @@ public class MonthOfSnow extends ListFragment {
                 Elements dowdivs = Jsoup.connect(urls[0]).get().select("div[class=dow]");
                 Elements valuedivs = Jsoup.connect(urls[0]).get().select("div[class=value], span[class=zero], span[class=noreport ");
 
-                for (int i = 6; i < datedivs.size(); i++)
-                    data[0][i - 6] = datedivs.get(i).ownText();
-
                 for (int i = 6; i < dowdivs.size(); i++)
-                    data[1][i - 6] = dowdivs.get(i).ownText();
+                    data[0][i - 6] = dowdivs.get(i).ownText();
+
+                for (int i = 6; i < datedivs.size(); i++)
+                    data[1][i - 6] = datedivs.get(i).ownText();
 
                 for (int i = 0, k = 0; i < valuedivs.size(); i++) {
                     if (!Objects.equals(valuedivs.get(i).ownText(), "")) {
@@ -126,7 +100,7 @@ public class MonthOfSnow extends ListFragment {
 
                 String[] formattedData = new String[30];
                 for (int i = 0; i < 30; i++)
-                    formattedData[i] = data[0][i] + "\n" + data[1][i] + "\n" + data[2][i];
+                    formattedData[i] = data[0][i] + ", " + data[1][i] + ": " + data[2][i];
 
                 return formattedData;
 
@@ -139,11 +113,6 @@ public class MonthOfSnow extends ListFragment {
         @Override
         protected void onPostExecute(final String[] result) {
             updateMonthView(result);
-//            getActivity().runOnUiThread(new Runnable() {
-//                public void run() {
-//                    updateMonthView(result);
-//                }
-//            });
         }
     }
 
